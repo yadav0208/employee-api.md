@@ -53,7 +53,7 @@ Returns an employee by ID.
 {
   "id": 1,
   "Name": "Rohan",
-  "Email": "rohan@example.com"
+  "Email": "rohan@shipway.com"
 }
 ```
 
@@ -66,7 +66,7 @@ Returns an employee by ID.
 ```json
 {
   "Name": "Updated Name",
-  "Email": "updated@example.com"
+  "Email": "updated@gmail.com"
 }
 ```
 
@@ -81,37 +81,6 @@ Deletes an employee with the specified ID.
 
 ---
 
-### 📤 Bulk Upload Employees  
-**POST** `/Users/bulk`
-
-**Request Body (JSON):**
-```json
-[
-  { "Name": "Radha", "Email": "radha@example.com" },
-  { "Name": "Shyam", "Email": "shyam@example.com" },
-  { "Name": "Pooja", "Email": "pooja@example.com" }
-]
-```
-
-**Note:** Make sure your backend:
-- Uses `express.json()` middleware
-- Expects `req.body` to be an array of objects
-
----
-
-## 🧪 Example cURL Request for Bulk POST
-
-```bash
-curl -X POST http://localhost:4000/Users/bulk \
-  -H "Content-Type: application/json" \
-  -d '[
-    { "Name": "Radha", "Email": "radha@example.com" },
-    { "Name": "Shyam", "Email": "shyam@example.com" },
-    { "Name": "Pooja", "Email": "pooja@example.com" }
-  ]'
-```
-
----
 
 ## 📁 Status Codes
 
@@ -121,10 +90,4 @@ curl -X POST http://localhost:4000/Users/bulk \
 - `404 Not Found` – Employee not found
 - `500 Internal Server Error` – Server-side issue
 
----
-
-## 📄 Author
-
-Made by: **Pankaj / moni**  
-Date: **July 8, 2025**
 
